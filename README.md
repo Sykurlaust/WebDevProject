@@ -1,6 +1,6 @@
 # WebDevProject
 
-This i my first try building HTML + CSS project at Vefskóli.
+This is my first try building HTML + CSS project at Vefskóli.
 
 ## Features
 - Built with HTML 
