@@ -1,11 +1,170 @@
-body {
-background-color:rgb(227, 214, 214);
-font-family: Arial, Helvetica, sans-serif;
-text-align:center;
-padding: 50px; 
+  /* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-    color:black;
-    }
+
+body {
+    text-align : left;
+    font-family: Arial, Helvetica, sans-serif;
+padding-top:16px clamp(24px, 6vw, 96px);
+}
+.right-img {
+   width: 420px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 8px;
+    align-self: flex-start;
+    transform: translateY (-8px);
     
+}
+
+body { padding-top: 12px; }
+
+.header-row {
+    display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 24px;
+}
+
+
+.button-row { margin-top: 0px; 
+   display:flex;
+   justify-content: flex-start;
+    margin-top: 30px;
+   
+}
+
+button {
+    background: linear-gradient(to right, hsl(0, 0%, 48%), hsl(30, 3%, 73%));
+color:rgb(255, 243, 243);
+height: 25px;
+border-style:none;
+border-radius: 20%;
+}
+
+a button {
+    text-decoration: none;}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.texti1 {
+    margin-top: 40px;
+    width: 100%;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.texti1 h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+
+
+/* other */
+.info {
+  margin: 20px 0;
+  text-align: center;
+}
+
+p {
+  color: #2e2e2e;
+  margin-bottom: 20px;
+}
+
+
+/* block-$ */
+.block-effect {
+  font-size: 50px;
+  line-height: 1.4;
+}
+
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+
+  color: transparent;
+  padding: 4px;
+
+  position: relative;
+  overflow: hidden;
+
+  animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+  content: '';
+
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+
+/* animations */
+@keyframes revealBlock {
+  100% {
+    color: #0f0f0f;
+  }
+}
+
+@keyframes revealingIn {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes revealingOut {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+.tagline { 
+    font-size: 14px;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+.block-reveal {
+    display: inline-block;
+}
+
+.block-effect .block-reveal:nth-child(2) {
+  font-size: 50px;     /* smaller */
+  line-height: 1.4;
+  display: block;      /* ensure it breaks onto its own line */
+  margin-top: 6px;
+}
+
+.texti1 {
+  margin-top: 40px;  /* space ABOVE the box (outside) */
+  padding: 0 12px;   /* space INSIDE the box, left/right */
+  line-height: 1.6;
+  font-size: 14px;
+  max-width: 70ch;   /* comfy line length */
+}
